@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -102,8 +101,8 @@
     <?php 
       require_once("4sq/src/FoursquareAPI.class.php");
       // Set your client key and secret
-      $client_key = "GKZR4D2DMKI3FRFVDPGEFFQJFSAJUXCHQN3HY4N10WXCDFP0";
-      $client_secret = "UQ5JIJOFDOGO0V4OF3QUHBP5FSN2EE2UKQHORWZ3CK0E2NNI";
+      $client_key = "";
+      $client_secret = "";
       // Load the Foursquare API library
 
       if($client_key=="" or $client_secret=="")
