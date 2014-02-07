@@ -2,6 +2,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  
+  <br/>
+  <br/>
+  <br/>
+  
+  
+	<!-- Grid CSS File (only needed for demo page) -->
+	<link rel="stylesheet" href="calendar/css/paragridma.css">
+
+	<!-- Core CSS File. The CSS code needed to make eventCalendar works -->
+	<link rel="stylesheet" href="calendar/css/eventCalendar.css">
+
+	<!-- Theme CSS file: it makes eventCalendar nicer -->
+	<link rel="stylesheet" href="calendar/css/eventCalendar_theme_responsive.css">
+	
     <meta charset="utf-8">
     <title>CDMX365</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -64,6 +79,8 @@
       <footer>
         <p>&copy; Company 2013</p>
       </footer>
+	  
+	  <div id="eventCalendar"></div>
 
     </div><!--/.fluid-container-->
 
@@ -87,11 +104,27 @@
 
     <script src="js/jquery-1.10.2.min.js"></script>
 
+		
+	<script src="calendar/js/jquery.eventCalendar.js"></script>
+	<script src="calendar/js/jquery.eventCalendar.min.js"></script>
+	<script src="calendar/js/jquery.timeago.js"></script>
+
     
 
     <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="js/stream.js"></script>
     <script type="text/javascript">
+	
+	 $(document).ready(function() {
+      
+	  $("#eventCalendar").eventCalendar({
+  eventsjson: 'eventosSec.humanDate.json.php',
+  jsonDateFormat: 'human'
+});
+      });
+
+	  
+	  
      
 
     </script>
