@@ -1,6 +1,6 @@
 var width = 960,
     height = 136,
-    cellSize = 17; // cell size
+    cellSize = 15; // Tamaño de celda 
 
 var day = d3.time.format("%w"),
     week = d3.time.format("%U"),
@@ -12,7 +12,7 @@ var color = d3.scale.quantize()
     .range(d3.range(11).map(function(d) { return "q" + d + "-11"; }));
 
 var svg = d3.select("body").selectAll("svg")
-    .data(d3.range(1990, 2011))
+    .data(d3.range(2013,2014))
   .enter().append("svg")
     .attr("width", width)
     .attr("height", height)
