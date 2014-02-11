@@ -17,12 +17,9 @@
 	<!-- Theme CSS file: it makes eventCalendar nicer -->
 	<link rel="stylesheet" href="calendar/css/eventCalendar_theme_responsive.css">
 	
-<<<<<<< HEAD
 
     <link rel="stylesheet" href="css/cal-heatmap.css">
 
-=======
->>>>>>> origin/atLab
     <meta charset="utf-8">
     <title>CDMX365</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,18 +124,57 @@
 
 
 <script type="text/javascript">
-  var cal = new CalHeatMap();
-  cal.init({
-    data: "datas.json"
-  });
+
+
+
 </script>
 
 
 
 
     <script type="text/javascript">
-<<<<<<< HEAD
 	 $(document).ready(function() {
+
+    $.ajax({
+    url: 'heatEventos.humanDate.json.php'
+}).done(function (data) {
+
+    ///////////////////////////////////////////////////
+    // Edit from here    
+
+    
+  var calendar = new CalHeatMap();
+
+  calendar.init({
+    
+    data: data,
+    start: new Date(2013, 0),
+    domain : "year",
+    subDomain : "day",
+    range : 1,
+    scale: [40, 60, 80, 100],
+    itemName: ["evento", "eventos"],
+    cellLabel: {
+      empty: "No hay eventos para {date}",
+      filled: "Llenado {count} {name} el {date}"
+    },
+    scaleLabel: {
+      lower: "Belle journée, il y a eu moins de {min} {name}",
+      inner: "Pas mal, entre {down} et {up} {name}",
+      upper: "Peut faire mieux, plus de {max} {name}"
+    },
+    format: {
+      date: function(date) {
+        return moment(date).format("LL");
+      },
+      legend: null,
+    }
+  });
+
+    // End edition    
+    ///////////////////////////////////////////////////
+});
+
 	  
 	  $("#eventCalendar").eventCalendar({
   eventsjson: 'eventosSec.humanDate.json.php',
@@ -159,15 +195,6 @@
   moveSpeed: 1000,
   moveOpacity: 1
 	});
-=======
-	
-	 $(document).ready(function() {
-      
-	  $("#eventCalendar").eventCalendar({
-  eventsjson: 'eventosSec.humanDate.json.php',
-  jsonDateFormat: 'human'
-});
->>>>>>> origin/atLab
       });
 
 	  
