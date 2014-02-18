@@ -11,20 +11,17 @@
 
     <title>¿Porque vienes?</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <!-- Bootstrap theme -->
-    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <!-- Bootstrap core CSS 
+    <link href="../css/bootstrap.css" rel="stylesheet" media="all" />-->
 
-    <!-- Custom styles for this template -->
-    <link href="css/style.css" rel="stylesheet">
+        <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <style>
-      #map_canvas {
-        width: 500px;
-        height: 400px;
-      }
-    </style>
+    <link href="css/MVP.css" rel="stylesheet">
+
+
+
+
 
 
 
@@ -39,6 +36,87 @@
   </head>
 
   <body>
+
+    <div id="content" class="container">
+
+
+<div class="row">
+  <div class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?lat=19.482325&lng=-99.185752" alt="Azcapotzalco"></img>
+  </div>
+  <div  class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?id=123&h=200&w=200" alt="GAM" ></img>
+  </div>
+  <div class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?id=123&h=200&w=200" alt="MiguelHidalgo"></img>
+  </div>
+  <div class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?id=123&h=200&w=200" alt="Cuauhtemoc" ></img>
+  </div>
+</div>
+     
+<div class="row">
+  <div class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?id=123&h=200&w=200" alt="VenustianoCarranza"></img>
+  </div>
+  <div  class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?id=123&h=200&w=200" alt="Cuajimalpa"></img>
+  </div>
+  <div class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?id=123&h=200&w=200" alt="AlvaroObregon"></img>
+  </div>
+  <div class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?id=123&h=200&w=200" alt="BenitoJuarez"></img>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?id=123&h=200&w=200" alt="Iztacalco"></img>
+  </div>
+  <div  class="col-md-3 col-sm-6 photoDeleg" >
+    <img src="get-image.php?id=123&h=200&w=200" alt="MagdalenaContreras"></img>
+  </div>
+  <div class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?id=123&h=200&w=200" alt="Coyoacan"></img>
+  </div>
+  <div class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?id=123&h=200&w=200" alt="Iztapalapa"></img>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?id=123&h=200&w=200" alt="Tlalpan"></img>
+  </div>
+  <div  class="col-md-3 col-sm-6 photoDeleg" >
+    <img src="get-image.php?id=123&h=200&w=200" alt="Xochimilco"></img>
+  </div>
+  <div class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?id=123&h=200&w=200" alt="Tlahuac"></img>
+  </div>
+  <div class="col-md-3 col-sm-6 photoDeleg">
+    <img src="get-image.php?id=123&h=200&w=200" alt="MilpaAlta"></img>
+  </div>
+</div>
+
+</div>
+
+<script src="js/jquery-1.10.2.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/funciones.js"></script>
+
+  <script type="text/javascript">
+
+ var images = ['OUT01ari.jpg', 'OUT02adobe.jpg', 'OUT03alife.jpg', 'OUT04chinup.jpg', 'OUT05datenightwinecologne.jpg', 'OUT06officechair.jpg', 'OUT07printer.jpg', 'OUT08whitewall.jpg', 'OUT09umbrella.jpg', 'OUT10converse.jpg', 'OUT11wardrobebar.jpg'];
+
+
+ $('#background').css({'background-image': 'url(images/' + images[Math.floor(Math.random() * images.length)] + ')'});
+
+</script>
 
   </body>
 </html>
