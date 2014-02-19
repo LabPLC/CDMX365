@@ -43,82 +43,82 @@
 
 
 <div class="row">
-  <div class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.482325", "-99.185752"); ?> alt="Azcapotzalco" class="img-thumbnail" ></img>
+  <div class="col-md-2 col-sm-6">
+    <img <?php renderPhoto("19.482325", "-99.185752"); ?> alt="Azcapotzalco" class="photoDeleg" ></img>
   </div>
-  <div  class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.487333", "-99.123613"); ?> alt="GAM" class="img-thumbnail" ></img>
+  <div  class="col-md-2 col-sm-6">
+    <img <?php renderPhoto("19.487333", "-99.123613"); ?> alt="GAM" class="photoDeleg" ></img>
   </div>
-  <div class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.430658", "-99.208395"); ?> alt="MiguelHidalgo" class="img-thumbnail"></img>
+  <div class="col-md-2 col-sm-6">
+    <img <?php renderPhoto("19.430658", "-99.208395"); ?> alt="MiguelHidalgo" class="photoDeleg"></img>
   </div>
-  <div class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.435674", "-99.145562"); ?> alt="Cuauhtemoc" class="img-thumbnail"></img>
+  <div class="col-md-2 col-sm-6">
+    <img <?php renderPhoto("19.435674", "-99.145562"); ?> alt="Cuauhtemoc" class="photoDeleg"></img>
   </div>
-</div>
-     
-<div class="row">
-  <div class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.435674", "-99.145562"); ?> alt="VenustianoCarranza" class="img-thumbnail"></img>
+  <div class="col-md-2 col-sm-6">
+    <img <?php renderPhoto("19.435674", "-99.145562"); ?> alt="VenustianoCarranza" class="photoDeleg"></img>
   </div>
-  <div  class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.363142", "-99.287952"); ?> alt="Cuajimalpa" class="img-thumbnail"></img>
-  </div>
-  <div class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.360938", "-99.228681"); ?> alt="AlvaroObregon" class="img-thumbnail"></img>
-  </div>
-  <div class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.379406", "-99.159145"); ?> alt="BenitoJuarez" class="img-thumbnail"></img>
+    <div  class="col-md-2  col-sm-3">
+    <img <?php renderPhoto("19.363142", "-99.287952"); ?> alt="Cuajimalpa" class="photoDeleg"></img>
   </div>
 </div>
 
 <div class="row">
-  <div class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.395694", "-99.095921"); ?> alt="Iztacalco" class="img-thumbnail"></img>
+  <div class="col-md-2 col-sm-6">
+    <img <?php renderPhoto("19.360938", "-99.228681"); ?> alt="AlvaroObregon" class="photoDeleg"></img>
   </div>
-  <div  class="col-md-3 col-sm-6 photoDeleg" >
-    <img <?php renderPhoto("19.314964", "-99.242589"); ?> alt="MagdalenaContreras" class="img-thumbnail"></img>
+<div class="col-md-8 col-sm-6 ">
+    <div id=""><input type="text" name="autoComplete" id="autoComplete"></input></div>
   </div>
-  <div class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.343744", "-99.156188"); ?> alt="Coyoacan" class="img-thumbnail"></img>
-  </div>
-  <div class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.342083", "-99.053216"); ?> alt="Iztapalapa" class="img-thumbnail"></img>
+  <div class="col-md-2 col-sm-6">
+    <img <?php renderPhoto("19.379406", "-99.159145"); ?> alt="BenitoJuarez" class="photoDeleg"></img>
   </div>
 </div>
 
 
 <div class="row">
-  <div class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.279091", "-99.211423"); ?> alt="Tlalpan" class="img-thumbnail"></img>
+  <div class="col-md-2 col-sm-6">
+      <img <?php renderPhoto("19.395694", "-99.095921"); ?> alt="Iztacalco" class="photoDeleg"></img>
   </div>
-  <div  class="col-md-3 col-sm-6 photoDeleg" >
-    <img <?php renderPhoto("19.257231", "-99.102966"); ?> alt="Xochimilco" class="img-thumbnail"></img>
+<div class="col-md-8 col-sm-6">
+    <div>Search</div>
   </div>
-  <div class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.299023", "-99.043647"); ?> alt="Tlahuac" class="img-thumbnail"></img>
-  </div>
-  <div class="col-md-3 col-sm-6 photoDeleg">
-    <img <?php renderPhoto("19.192389", "-99.023284"); ?> alt="MilpaAlta" class="img-thumbnail"></img>
+  <div class="col-md-2 col-sm-6">
+    <img <?php renderPhoto("19.314964", "-99.242589"); ?> alt="MagdalenaContreras" class="photoDeleg"></img>
   </div>
 </div>
+
+
+<div class="row">
+  <div class="col-md-2 col-sm-6">
+    <img <?php renderPhoto("19.343744", "-99.156188"); ?> alt="Coyoacan" class="photoDeleg"></img>
+  </div>
+  <div class="col-md-2 col-sm-6">
+    <img <?php renderPhoto("19.342083", "-99.053216"); ?> alt="Iztapalapa" class="photoDeleg"></img>
+  </div>
+  <div class="col-md-2 col-sm-6">
+    <img <?php renderPhoto("19.279091", "-99.211423"); ?> alt="Tlalpan" class="photoDeleg"></img>
+  </div>
+  <div  class="col-md-2 col-sm-6" >
+    <img <?php renderPhoto("19.257231", "-99.102966"); ?> alt="Xochimilco" class="photoDeleg"></img>
+  </div>
+  <div class="col-md-2 col-sm-6">
+    <img <?php renderPhoto("19.299023", "-99.043647"); ?> alt="Tlahuac" class="photoDeleg"></img>
+  </div>
+  <div class="col-md-2 col-sm-6">
+    <img <?php renderPhoto("19.192389", "-99.023284"); ?> alt="MilpaAlta" class="photoDeleg"></img>
+  </div>
+</div>
+
+
 
 </div>
 
 <script src="js/jquery-1.10.2.min.js"></script>
-
 <script src="js/bootstrap.min.js"></script>
-
 <script src="js/funciones.js"></script>
+<script src="js/4sqacplugin.js"></script>
 
-  <script type="text/javascript">
-
- var images = ['OUT01ari.jpg', 'OUT02adobe.jpg', 'OUT03alife.jpg', 'OUT04chinup.jpg', 'OUT05datenightwinecologne.jpg', 'OUT06officechair.jpg', 'OUT07printer.jpg', 'OUT08whitewall.jpg', 'OUT09umbrella.jpg', 'OUT10converse.jpg', 'OUT11wardrobebar.jpg'];
-
-
- $('#background').css({'background-image': 'url(images/' + images[Math.floor(Math.random() * images.length)] + ')'});
-
-</script>
 
   </body>
 </html>
