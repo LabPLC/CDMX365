@@ -19,20 +19,12 @@
 
     <link href="css/MVP.css" rel="stylesheet">
 
+<script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
 
 
+    <script src="js/funciones.js" type="text/javascript"></script>
 
-
-
-
-    <!-- Just for debugging purposes. Don't actually copy this line! -->
-    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
   </head>
 
   <body>
@@ -68,7 +60,18 @@
     <img <?php renderPhoto("19.360938", "-99.228681"); ?> alt="AlvaroObregon" class="photoDeleg"></img>
   </div>
 <div class="col-md-8 col-sm-6 ">
-    <div id=""><input type="text" name="autoComplete" id="autoComplete"></input></div>
+    
+  <div>
+   <form id="searchform">
+      <div>
+         ¿Donde estaras? <input type="text" size="30" value="" onkeyup="autocompleta(this.value);"/>
+      </div>
+
+     
+      <div id="suggestions"></div>
+   </form>
+  </div>
+
   </div>
   <div class="col-md-2 col-sm-6">
     <img <?php renderPhoto("19.379406", "-99.159145"); ?> alt="BenitoJuarez" class="photoDeleg"></img>
@@ -80,8 +83,26 @@
   <div class="col-md-2 col-sm-6">
       <img <?php renderPhoto("19.395694", "-99.095921"); ?> alt="Iztacalco" class="photoDeleg"></img>
   </div>
-<div class="col-md-8 col-sm-6">
-    <div>Search</div>
+<div class="col-md-8 col-sm-6" id="resContainer">
+    
+  <div>
+         ¿Que fechas? <input type="text" size="30" value="" />
+
+
+       </br>
+<input type="button" >Autobus</input>&nbsp;
+
+<input type="button" >Avion</input>
+
+</br>
+
+<input type="button">Siguiente</input>
+
+
+      </div>
+
+        
+
   </div>
   <div class="col-md-2 col-sm-6">
     <img <?php renderPhoto("19.314964", "-99.242589"); ?> alt="MagdalenaContreras" class="photoDeleg"></img>
@@ -110,15 +131,7 @@
   </div>
 </div>
 
-
-
 </div>
-
-<script src="js/jquery-1.10.2.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/funciones.js"></script>
-<script src="js/4sqacplugin.js"></script>
-
 
   </body>
 </html>

@@ -100,7 +100,7 @@
       </div>
 
     <?php 
-      require_once("4sq/src/FoursquareAPI.class.php");
+      require_once("../4sq/src/FoursquareAPI.class.php");
       // Set your client key and secret
       $client_key = "GKZR4D2DMKI3FRFVDPGEFFQJFSAJUXCHQN3HY4N10WXCDFP0";
       $client_secret = "UQ5JIJOFDOGO0V4OF3QUHBP5FSN2EE2UKQHORWZ3CK0E2NNI";
@@ -123,14 +123,13 @@
   // Generate a latitude/longitude pair using Google Maps API
   list($lat,$lng) = $foursquare->GeoLocate($location);
   // Prepare parameters
-  $params = array("ll"=>"$lat,$lng", "radius"=>"100", "intent"=>"browse");
+  $params = array("ll"=>"19.379406,-99.159145 ", "query"=>"zoca");
   // Perform a request to a public resource
   //$response = $foursquare->GetPublic("venues/search",$params);
-  $response = $foursquare->GetPublic("venues/search",$params);
+  $response = $foursquare->GetPublic("venues/suggestcompletion",$params);
 
-  $venues = json_decode($response);
+  $minivenues = json_decode($response);
   
-
 ?>
 
 <?php
@@ -170,7 +169,7 @@ curl_close($ch);
     <?php endforeach; ?>
 
 
-      <?php echo "Conteo - ".count($venues->response->venues)." - "; foreach($venues->response->venues as $venue): ?>
+      <?php echo "Conteo - ".count($minivenues->response->minivenues)." - "; foreach($minivenues->response->minivenues as $venue): ?>
       <div class="venue">
         <?php 
           
@@ -218,13 +217,13 @@ curl_close($ch);
 
 
           
-          if(property_exists($venue->hereNow,"count"))
+          /*if(property_exists($venue->hereNow,"count"))
           {
               echo ''.$venue->hereNow->count ." people currently here <br/> ";
           }
 
                     echo '<b><i>History</i></b> :'.$venue->stats->usersCount." visitors , ".$venue->stats->checkinsCount." visits ";
-          
+          */
         ?>
       
       </div>
