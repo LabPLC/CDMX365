@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Droppable - Default functionality</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/resources/demos/style.css">
+
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+
+<script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+<link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
+
+<script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-osm/v0.1.0/leaflet-osm.js'></script>
+
+ <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+
+
+  <style>
+  .dragster { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+  #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+
+
+  #map { position:absolute; /* top:0; bottom:0; */  height:50%; width:50%; }
+  #mapdrag { background-color: blue; position:relative; display:inline:block; /* top:0; bottom:0; */  height:50%; width:50%; }
+
+
+  </style>
+ <script>
+
+
+
+  $(function() {
+    $( ".dragster" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+    });
+
+$( "#map" ).droppable({
+      drop: function( event, ui ) {
+
+        var draggableId = ui.draggable.attr("id");
+  var lats = $( "#"+draggableId ).data( "lat");
+  var lngs = $( "#"+draggableId ).data( "lng");
+
+var marker = L.marker([lats, lngs], { draggable:'true'}).addTo(map);
+
+map.setView(new L.LatLng(lats, lngs),16);
+
+
+
+      }
+    });
+
+  });
+  </script>
+</head>
+<body>
+ 
+<div id="draggable" class="ui-widget-content dragster">
+  <p>Drag me to my target</p>
+
+<img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="MD Logo" />
+</div>
+
+
+<div id="drag2" class="ui-widget-content dragster">
+  <p>Este es el drag 2</p>
+
+<img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="MD Logo" />
+</div>
+
+<div id="Comida">
+  <div id="Venue">
+    <div id="ImagenVenue"></div>
+    <div id="TextoVenue"></div>
+  </div>
+</div>
+ 
+<div id="droppable" class="ui-widget-header">
+  <p>Drop here</p>
+
+
+
+
+</div>
+</br></br></br></br></br></br></br></br></br></br>
+
+
+<div id="map" >
+
+  
+</div>
+ 
+ 
+<script>
+var map = L.mapbox.map('map', 'mariojim.hb1imkob')
+    .setView([19.432608,-99.133208],11);
+
+$( "#draggable" ).data( "lat", 19.425791);
+$( "#draggable" ).data( "lng", -99.132911);
+
+$( "#drag2" ).data( "lat", 19.435791);
+$( "#drag2" ).data( "lng", -99.142911);
+
+ 
+
+
+</script>
+</body>
+</html>

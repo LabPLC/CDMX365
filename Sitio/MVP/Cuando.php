@@ -25,7 +25,11 @@
 
 <style>
   body { margin:0; padding:0; }
-  #map { position:absolute; top:0; bottom:0; width:100%; }
+  /*#map { position:absolute; top:0; bottom:0; width:100%; }*/
+
+  #map { position:absolute;/*top:0; bottom:0; */ height:50%; width:50%; }
+
+
 </style>
 
     </head>
@@ -66,10 +70,29 @@
 </br>
 </br>
 </br>
+
+<div class="row">
+  <div class="col-md-12 col-sm-6" id="map">
+
+
+
+
+</div>
+</div>
+
 <input type="button" > Itinerario >>> </input>
 </br>
 
 
     </div>
+
+
+    <script>
+var map = L.mapbox.map('map', 'mariojim.hb1imkob')
+    .setView([40, -74.50], 9);
+</script>
+
+
+
   </body>
 </html>
