@@ -43,4 +43,20 @@ body {
       background-image:url(../images/shortcuts_arrow.gif); background-repeat:no-repeat; background-position:right; }
 #searchresults span.seperator a { background-color:transparent; display:block; margin:5px; height:auto; color:#ffffff; }
 
+#datepicker {
+z-index: 9999;
+top: 0;
+left: 0;
+padding: 4px;
+margin-top: 1px;
+-webkit-border-radius: 4px;
+-moz-border-radius: 4px;
+border-radius: 4px;
+}
+
+.datepicker {
+    z-index:1051 !important;
+}
+
+
 

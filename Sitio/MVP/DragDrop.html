@@ -64,6 +64,8 @@ map.setView(new L.LatLng(lats, lngs),16);
 </head>
 <body>
  
+ <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.0.1/leaflet-omnivore.min.js'></script>
+ 
 <div id="draggable" class="ui-widget-content dragster">
   <p>Drag me to my target</p>
 
@@ -111,8 +113,17 @@ $( "#drag2" ).data( "lat", 19.435791);
 $( "#drag2" ).data( "lng", -99.142911);
 
  
-
+var runLayer = omnivore.kml('MapaRecintosSecretariadeCulturaDF.kml')
+    .on('ready', function() {
+        map.fitBounds(runLayer.getBounds());
+    })
+    .addTo(map);
 
 </script>
 </body>
+
+
+
+
+
 </html>
