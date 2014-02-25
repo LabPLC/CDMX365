@@ -10,6 +10,8 @@
 
   <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 
+<script src='js/funciones.js'></script>
+
 <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
 
@@ -23,14 +25,28 @@
   #droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
 
 
-  #map { position:absolute; /* top:0; bottom:0; */  height:50%; width:50%; }
+  #map { position:absolute;  /* top:0; bottom:0; */  height:50%; width:50%; }
   #mapdrag { background-color: blue; position:relative; display:inline:block; /* top:0; bottom:0; */  height:50%; width:50%; }
 
 
   </style>
  <script>
 
+map.featureLayer.on('ready', function(e) {
+  
+  var line = [];
 
+  this.eachLayer(function(marker) {
+    line.push(marker.getLatLng());
+  });
+
+  var polyline_options = {
+    color: '#000'
+  };
+
+  var polyline = L.polyline(line, polyline_options).addTo(map);
+
+});
 
   $(function() {
     $( ".dragster" ).draggable();
@@ -41,7 +57,7 @@
           .find( "p" )
             .html( "Dropped!" );
       }
-    });
+    });             
 
 $( "#map" ).droppable({
       drop: function( event, ui ) {
@@ -52,9 +68,10 @@ $( "#map" ).droppable({
 
 var marker = L.marker([lats, lngs], { draggable:'true'}).addTo(map);
 
+currLat = lats;
+currLng = lngs;
+
 map.setView(new L.LatLng(lats, lngs),16);
-
-
 
       }
     });
@@ -65,7 +82,8 @@ map.setView(new L.LatLng(lats, lngs),16);
 <body>
  
  <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.0.1/leaflet-omnivore.min.js'></script>
- 
+
+
 <div id="draggable" class="ui-widget-content dragster">
   <p>Drag me to my target</p>
 
@@ -97,14 +115,22 @@ map.setView(new L.LatLng(lats, lngs),16);
 
 
 <div id="map" >
+ 
+</div>
 
-  
+
+</br></br></br></br></br></br></br></br></br></br>
+<div id="map2" >
+ 
 </div>
  
  
 <script>
 var map = L.mapbox.map('map', 'mariojim.hb1imkob')
     .setView([19.432608,-99.133208],11);
+
+    var map2 = L.mapbox.map('map2', 'mariojim.hb1imkob')
+    .setView([19.432608,-99.453208],12);
 
 $( "#draggable" ).data( "lat", 19.425791);
 $( "#draggable" ).data( "lng", -99.132911);
@@ -113,11 +139,11 @@ $( "#drag2" ).data( "lat", 19.435791);
 $( "#drag2" ).data( "lng", -99.142911);
 
  
-var runLayer = omnivore.kml('MapaRecintosSecretariadeCulturaDF.kml')
+/*var runLayer = omnivore.kml('MapaRecintosSecretariadeCulturaDF.kml')
     .on('ready', function() {
         map.fitBounds(runLayer.getBounds());
     })
-    .addTo(map);
+    .addTo(map);*/
 
 </script>
 </body>

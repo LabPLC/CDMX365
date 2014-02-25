@@ -9,3 +9,8 @@ function autocompleta(inputString) {
    }
 }
 
+var currLat;
+var currLng;
+
+
+
