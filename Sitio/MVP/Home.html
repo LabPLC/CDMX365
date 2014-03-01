@@ -9,21 +9,32 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../assets/ico/favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>365CDMX</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+  <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
     <!-- Custom styles for this template 
     <link href="jumbotron.css" rel="stylesheet">-->
+            <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
 
    <link rel="stylesheet" type="text/css" media="screen"
      href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+
+<script type="text/javascript" async="" src="//s3.buysellads.com/ac/bsa.js"></script>
+
 
 
      <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
 
      <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.js'></script>
+
 <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.1/mapbox.css' rel='stylesheet' />
 
 <script src='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-osm/v0.1.0/leaflet-osm.js'></script>
@@ -31,8 +42,14 @@
  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
 
 <style>
-#map { position:absolute;  top:-20; bottom:-20;   height:30%; width:30%; }
+#map { position:relative;  top:-20; bottom:-20;   height:30%; width:30%; }
 </style>
+
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
 
   </head>
 
@@ -52,13 +69,15 @@
           <a class="navbar-brand" href="#">Eventur</a>
         </div>
         <div class="navbar-collapse collapse">
-          <form class="navbar-form navbar-left" role="form">
+          <form class="navbar-form navbar-left" id="frmSubmit" role="form" action="Designer.php">
             <div class="form-group">
-              <input type="text" placeholder="Lugar" class="form-control">
+              <input type="text" placeholder="Lugar" id="searchTextField"  style="width:300px;" class="form-control">
             </div>
             <div class="form-group">
 
-              <input type="text" placeholder="Fechas" class="form-control input-append date datetimepicker" id="datetimepicker" data-date-format="dd-mm-yyyy"/><span class="add-on"><i class="icon-calendar"></i></span>
+              <input type="text" id="datepicker"  placeholder="Fechas" class="form-control input-append date datepicker"  data-date-format="dd-mm-yyyy"/>
+
+              <span class="add-on"><i class="icon-calendar"></i></span>
 
             </div>
             <button type="submit" class="btn btn-success">Entrar</button>
@@ -98,9 +117,10 @@
 
           </div>
           <div class="col-md-6">
-            <div id="timelineMap" >Seleccion de zona <div id="map" ></div> 
 
-          </br></br></br></br></br></br></br>
+            <img src="img/df.jpeg" rel="rollover.jpg" class="rollover" />
+
+          
           </div>
 
           
@@ -121,56 +141,74 @@
       <div class="row">
         <div class="col-md-4">
           <h2>Espectaculos</h2>
-          <img alt="Calendario"></img>
-          <div id="tagCloud">
-            - Teatro
-            - Danza
-            - Musica
-            - Exposiciones
-            - Eventos especiales
-            - Gastronomia
-            - Deportes
-            - Cursos y talleres
-            - Ferias congresos y convenciones
-          </div>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          
+          <div class="tags">
+      <ul>
+        <li class="tag1"><a href="#">Teatro</a></li> 
+        <li class="tag2"><a href="#">Musica</a></li>
+        <li class="tag3"><a href="#">Danza</a></li>
+        <li class="tag2"><a href="#">Exposiciones</a></li>
+        <li class="tag4"><a href="#">Eventos gastronomicos</a></li>
+        <li class="tag1"><a href="#">Eventos especiales</a></li>
+        <li class="tag1"><a href="#">Gastronomia</a></li>
+        <li class="tag5"><a href="#">Deportes</a></li>
+        <li class="tag2"><a href="#">Cursos y talleres</a></li>
+        <li class="tag1"><a href="#">Ferias, congresos y convenciones</a></li>
+      </ul>
+    </div>
+
+          
         </div>
         <div class="col-md-4">
           <h2>Zonas</h2>
-          <img alt="Zonas"></img>
-            <div id="zonas">
-              - Aeropuerto 
-              - Foro SOL
-              - Centro-alameda
-              - chapultepec polanco
-              - condesa roma
-              - coyoacan
-              - iztapalapa
-              - norte basilica
-              - periferico sur
-              - santa fe
-              - tlalpan
-              - torre mayor
-              - wtc
-              - xochimilco
-            </div>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          
+ <div class="tags">
+      <ul>
+        <li class="tag1"><a href="#">Aeropuerto</a></li> 
+        <li class="tag2"><a href="#">Foro Sol</a></li>
+        <li class="tag3"><a href="#">Centro-Alameda</a></li>
+        <li class="tag2"><a href="#">Chapultepec-Polanco</a></li>
+        <li class="tag4"><a href="#">Condesa-Roma</a></li>
+        <li class="tag1"><a href="#">Coyoacan</a></li>
+        <li class="tag1"><a href="#">Iztapalapa-Central</a></li>
+        <li class="tag5"><a href="#">Norte-Basilica</a></li>
+        <li class="tag2"><a href="#">Periferico Sur</a></li>
+        <li class="tag1"><a href="#">Santa Fe</a></li>
+        <li class="tag4"><a href="#">Tlalpan</a></li>
+        <li class="tag1"><a href="#">Torre Mayor</a></li>
+        <li class="tag1"><a href="#">WTC</a></li>
+        <li class="tag5"><a href="#">Xochimilco</a></li>
+      </ul>
+    </div>
        </div>
         <div class="col-md-4">
           <h2>Delegaciones</h2>
-          <img alt="Delegaciones"></div>
-            <div id="delegaciones">
-              - iztap
-              - cuau
-            </div>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <div class="tags">
+      <ul>
+        <li class="tag1 rollover" rel="img/df2.jpg" ><a href="#">Alvaro Obregon</a></li> 
+        <li class="tag2 rollover"><a href="#">Azcapotzalco</a></li>
+        <li class="tag3 rollover"><a href="#">Benito Juarez</a></li>
+        <li class="tag2 rollover"><a href="#">Coyoacan</a></li>
+        <li class="tag4 rollover"><a href="#">Cuajimalpa de Morelos</a></li>
+        <li class="tag1"><a href="#">Cuauhtemoc</a></li>
+        <li class="tag1"><a href="#">Gustavo A. Madero</a></li>
+        <li class="tag5"><a href="#">Iztacalco</a></li>
+        <li class="tag2"><a href="#">Iztapalapa</a></li>
+        <li class="tag1"><a href="#">Magdalena Contreras</a></li>
+        <li class="tag4"><a href="#">Miguel Hidalgo</a></li>
+        <li class="tag1"><a href="#">Milpa Alta</a></li>
+        <li class="tag1"><a href="#">Tlahuac</a></li>
+        <li class="tag3"><a href="#">Venustiano Carranza</a></li>
+        <li class="tag5"><a href="#">Xochimilco</a></li>
+      </ul>
+    </div>
         </div>
       </div>
 
       <hr>
 
       <footer>
-        <p>&copy; Company 2014</p>
+        
       </footer>
     </div> <!-- /container -->
 
@@ -185,21 +223,13 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+<script type="text/javascript" async="" src="js/tinysort.js"></script>
+
   <script src="js/bootstrap.min.js"></script>
  
  <script type="text/javascript"
      src="http://tarruda.github.com/bootstrap-datetimepicker/assets/js/bootstrap-datetimepicker.min.js">
     </script>
-
-
-    <script type="text/javascript">
-  $(document).ready(function() {console.log("Si jalo");
-    $('#datetimepicker').datetimepicker({
-      pickTime: false,
-      language: 'en'
-    });
-  });
-</script>
 
 <script>
   /*$('#modal-form-submit').on('click', function(e){
@@ -212,12 +242,71 @@
 </script>
 
 <script>
-var map = L.mapbox.map('map', 'mariojim.hb1imkob')
+/*var map = L.mapbox.map('map', 'mariojim.hb1imkob')
     .setView([19.432608,-99.133208],11);
+
+jQuery(document).ready(function($) {   
+//rollover swap images with rel 
+var img_src = ""; 
+var new_src = "";   
+$(".rollover").hover(function(){ 
+//mouseover   
+img_src = $(this).attr('src'); 
+//grab original image 
+new_src = $(this).attr('rel'); 
+//grab rollover image 
+$(this).attr('src', new_src); //swap images 
+$(this).attr('rel', img_src); //swap images   
+}, function(){ //mouse out   
+$(this).attr('src', img_src); //swap images 
+$(this).attr('rel', new_src); //swap images 
+});   //preload images 
+var cache = new Array(); //cycle through all rollover elements and add rollover img src to cache array 
+$(".rollover").each(function(){ var cacheImage = document.createElement('img'); cacheImage.src = $(this).attr('rel'); cache.push(cacheImage); }); } 
+
+$(function () {
+    $('a img').hover( function () {
+        $(this).attr('src', $(this).attr('src').replace(/\.jpg/, '-on.jpg') );
+    });
+});
+
+*/
 
 </script>
 
+<script type="text/javascript">
+function initialize() {
+    var input = document.getElementById('searchTextField');
+    var options = {componentRestrictions: {country: 'mx'}};
+                 
+    var complete = new google.maps.places.Autocomplete(input, options);
+}
+             
+google.maps.event.addDomListener(window, 'load', initialize);
 
+
+var formaPlace = document.getElementById('frmSubmit');
+
+google.maps.event.addDomListener(formaPlace, 'submit', dale);
+
+
+
+
+
+function dale()
+{var complete = autocomplete.getPlace();
+alert();
+var latitude = place.geometry.location.lat();
+var longitude = place.geometry.location.lng();
+
+alert(latitude);}
+
+
+
+
+
+
+</script>
 
   </body>
 </html>
